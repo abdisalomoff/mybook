@@ -1,0 +1,23 @@
+.books{
+    padding-top: 90px;
+    padding-bottom: 80px;
+    background-color: #F5F6F8;
+
+    .books-wrapper{
+        display: flex;
+        // gap: 135px;
+        justify-content: space-between;
+    }
+
+    &__list{
+        margin-left: 74px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 147px;
+        row-gap: 70px;
+    }
+
+    &__components{
+        margin-left: 116px;
+    }
+}

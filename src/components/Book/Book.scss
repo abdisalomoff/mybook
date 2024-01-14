@@ -1,0 +1,111 @@
+.book {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 384px;
+    height: 338px;
+    display: flex;
+    column-gap: 26px;
+    // border-radius: 6px;
+    padding: 29px 33.6px 27.3px 104px;
+    position: relative;
+    background-color: #fff;
+
+    &__img {
+        position: absolute;
+        width: 100%;
+        max-width: 148px;
+        top: 32px;
+        left: -74px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        max-width: 245px;
+    
+
+        h2 {
+            color: #000;
+            font-family: "Rubik";
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 35px;
+            text-transform: capitalize;
+        }
+
+        h3 {
+            color: rgba(0, 0, 0, 0.6);
+            font-family: "Rubik";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: capitalize;
+            margin-bottom: 0px;
+        }
+
+        &-rating {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            height: 30px;
+
+            img {
+                width: 85px;
+                height: 11px;
+            }
+
+            h5 {
+                color: rgba(0, 0, 0, 0.30);
+                font-family: "Rubik";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 16px;
+                letter-spacing: 0.032px;
+            }
+        }
+
+        p {
+            color: rgba(0, 0, 0, 0.30);
+
+            font-family: "Rambla";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            /* 156.25% */
+            letter-spacing: 0.048px;
+        }
+
+        .book-buy {
+            color: #FF971D;
+            font-family: "Rubik";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-transform: capitalize;
+            width: 245px;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #FF971D;
+            background: rgba(255, 151, 29, 0.10);
+            margin-top: auto;
+        }
+    }
+}
+
+.book:hover {
+    transform: scale(1.03);
+    transition: all 0.2s;
+}
+
+.book:active {
+    transform: scale(0.9);
+    transition: all 0.2s;
+}

@@ -1,0 +1,43 @@
+.sidebar {
+    &__title,
+    &__recomendations {
+        color: #000;
+        font-family: "Karla";
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__line{
+        margin: 60px 0px;
+            height: 1px;
+            width: 100%;
+            background-color: #DEDEDE;
+    }
+
+    ul {
+        display: grid;
+        gap: 25px;
+        margin-top: 17px;
+    }
+
+    .item {
+        color: #000;
+        font-family: Karla;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+
+}
+
+.active {
+    color: red;
+    font-weight: bold;
+  }
+
+
+  

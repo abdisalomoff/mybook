@@ -1,0 +1,64 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 33px 0px;
+
+    .line {
+        height: 25px;
+        width: 1px;
+        background-color: #DEDEDE;
+    }
+
+    &-left {
+        display: flex;
+        gap: 20px;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 45px;
+        list-style: none;
+
+        li {
+            color: #fff;
+
+            a {
+                color: #fff;
+                font-family: 'Rubik';
+                font-size: 16px;
+                font-weight: 500;
+                line-height: normal;
+                outline: none;
+                text-decoration: none;
+                padding-bottom: 4px;
+            }
+
+            .active {
+                border-bottom: 2px solid white;
+            }
+        }
+    }
+
+    .login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 58px;
+        border-radius: 30px;
+        background-color: #fff;
+        border: 1px solid transparent;
+        color: #000;
+        font-family: "Rubik";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .login:hover {
+        transform: scale(1.03);
+        transition: all 0.2s;
+    }
+}
