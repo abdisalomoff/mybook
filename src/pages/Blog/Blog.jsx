@@ -1,4 +1,4 @@
-import "./blog.scss";
+import "./Blog.scss";
 import BlogBg from "../../assets/images/blog-bg.png";
 import Footer from "../../components/Footer/Footer";
 import Hero from "../../components/Hero/Hero";
