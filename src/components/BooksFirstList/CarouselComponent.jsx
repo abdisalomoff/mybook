@@ -9,21 +9,21 @@ import Book1 from "../../assets/images/content.jpg";
 // const API_KEY = "AIzaSyCvcdVCjGW292ele-eHakp-jqbvfRai3Dc";
 const API_KEY = "AIzaSyA6SaT23KNiiA6DnUfUQTvFeyAcQEkwnSU";
 
-const CarouselComponent = ({ selectedRecomendation  }) => {
+const CarouselComponent = () => {
   const dispatch = useDispatch();
   const dataState = useSelector((state) => state.data);
+  // console.log(dataState);
 
   useEffect(() => {
-    const recomendationQuery = selectedRecomendation === "Recomendation" ? "" : `${selectedRecomendation}`;
-    dispatch(fetchData(`https://www.googleapis.com/books/v1/volumes?q=${recomendationQuery}+inauthor:keyes&key=${API_KEY}`));
+    dispatch(fetchData(`https://www.googleapis.com/books/v1/volumes?q=computer&orderBy=newest&key=${API_KEY}`));
     
-  }, [dispatch, selectedRecomendation]);
+  }, [dispatch]);
 
   if (!dataState.data || !dataState.data.items) {
-    return <p>Loading...</p>;
+    return <p></p>;
   }
 
-  const books = dataState.data.items.slice(0, 6).map((item) => ({
+  const books = dataState.data.items.slice(-6).map((item) => ({
     image: item.volumeInfo?.imageLinks?.thumbnail || Book1,
     title: item.volumeInfo?.title,
     author: item.volumeInfo?.authors ? item.volumeInfo.authors[0] : "",
@@ -34,7 +34,7 @@ const CarouselComponent = ({ selectedRecomendation  }) => {
 
   return (
     <main>
-      <h2 className="genre__title">Recomendation books</h2>
+      <h2 className="genre__title second__list">Book by genre</h2>
       <ul className="books__list">
         {books.map((item, index) => (
           <li key={index}>

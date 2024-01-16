@@ -2,15 +2,18 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.scss";
 
-const Sidebar = ({ onGenreChange, onRecomendationClick  }) => {
+const Sidebar = ({ onGenreChange, onRecomendationChange}) => {
   const genres = [
     "All",
     "Business",
-    "Apple",
     "Fiction",
     "Philosophy",
     "Biography",
     "Technology",
+    "Horror",
+    "Thriller",
+    "Fantasy",
+    "Romance"
   ];
 
   const handleGenreClick = (genre) => {
@@ -25,8 +28,9 @@ const Sidebar = ({ onGenreChange, onRecomendationClick  }) => {
   ];
 
   const handleRecomendationClick = (rec) => {
-    onRecomendationClick(rec);
+    onRecomendationChange(rec);
   };
+
 
   return (
     <div className="sidebar">
@@ -45,7 +49,7 @@ const Sidebar = ({ onGenreChange, onRecomendationClick  }) => {
       <ul>
         {recomendations.map((item, index) => (
           <li key={index}>
-            <NavLink className="item" onClick={() => handleRecomendationClick(item.link)}>
+            <NavLink className="item" onClick={() => handleRecomendationClick(rec)}>
               {item.title}
             </NavLink>
           </li>

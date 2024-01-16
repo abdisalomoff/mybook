@@ -1,0 +1,228 @@
+.bookby {
+    background-image: url("../../assets/images/BookBySingle-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    position: relative;
+    background-color: #F5F6F8;
+    
+    &-inner{
+        display: flex;
+        gap: 40px;
+    }
+}
+
+
+
+.single__book {
+    // position: absolute;
+    padding-top: 20px;
+    top: 186px;
+    display: flex;
+    flex-direction: column;
+    width: 729px;
+    background-color: #fff;
+
+    &-backtbn{
+        border: none;
+        background-color: transparent;
+        width: 100px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+
+    &-card {
+        display: flex;
+    }
+
+    &-img {
+        width: 100%;
+        max-width: 287px;
+        box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.20);
+    }
+
+    &-about {
+        padding: 0px 35px 0px;
+        margin-top: auto;
+    }
+
+    &-title {
+        color: #000;
+        font-family: "Rubik";
+        font-size: 57px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: capitalize;
+        margin-bottom: 25px;
+    }
+
+    &-title-data {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        color: rgba(0, 0, 0, 0.60);
+        font-family: "Rambla";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+    }
+
+    &-subtitle {
+        color: rgba(0, 0, 0, );
+        font-family: 'Rambla';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        /* 162.5% */
+        letter-spacing: 0.064px;
+    }
+
+    &-buttons {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-buy,
+    &-read {
+
+        font-family: "Rubik";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: capitalize;
+        border-radius: 10px;
+        padding: 12px 30px;
+        text-align: center;
+        width: 100%;
+        max-width: 176px;
+        cursor: pointer;
+    }
+
+    &-buy {
+        color: #FFF;
+        background: #FF971D;
+    }
+
+    &-read {
+        color: rgba(255, 151, 29, 0.60);
+        border: 1px solid #FF971D;
+        background: #fff;
+    }
+
+    &-body {
+        padding: 35px;
+        margin-top: 22px;
+    }
+
+    &-description-title,
+    &-info {
+        color: #000;
+        font-family: "Rubik";
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0.075px;
+    }
+
+    &-description {
+        margin-top: 25px;
+        color: rgba(0, 0, 0, 0.60);
+        font-family: 'Rambla';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        /* 162.5% */
+        letter-spacing: 0.064px;
+    }
+
+    &-genres {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        margin: 50px 0px;
+    }
+
+    &-genre-link {
+        color: rgba(0, 0, 0, 0.30);
+        font-family: "Rubik";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23px;
+        /* 143.75% */
+        letter-spacing: 0.048px;
+        padding: 8px 25px;
+        background: #DEDEDE;
+        border-radius: 10px;
+    }
+
+    &-info-list {
+        margin-top: 20px;
+        display: grid;
+        gap: 15px;
+    }
+
+    &-info-list-title {
+        display: flex;
+        // align-items: center;
+        gap: 20px;
+
+        p {
+            width: 60px;
+            color: rgba(0, 0, 0, 0.60);
+            font-family: "Rambla";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+
+        span {
+            color: rgba(0, 0, 0, 0.30);
+            font-family: "Rambla";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+    }
+
+    &-see-comment {
+        text-align: center;
+        color: #FF971D;
+        font-family: "Rubik";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        padding: 13px 153px;
+        width: 100%;
+        max-width: 479px;
+        border-radius: 10px;
+        border: 1px solid #FF971D;
+        display: block;
+        // margin-top: 175px;
+        margin: 75px auto 0px;
+    }
+
+
+}
+
+.single__book-right{
+    margin-top: 500px;
+    width: 500px;
+}

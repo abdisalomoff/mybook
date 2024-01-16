@@ -2,9 +2,9 @@ import Header from "../Header/Header";
 import "./Hero.scss"
 import Search from "../../assets/icons/search.svg"
 
-const Hero = ({ title, subtitle }) => {
+const Hero = ({ title, subtitle, bg }) => {
   return (
-    <div className="hero-wrapper">
+    <div className="hero-wrapper" style={{ backgroundImage: `url(${bg})` }}>
       <div className="container">
       <Header />
       <div>

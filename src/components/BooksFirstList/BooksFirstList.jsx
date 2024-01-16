@@ -2,29 +2,39 @@ import React, { useEffect } from "react";
 import Book from "../Book/Book";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../../slice/fetchDataSlice";
-import "./BooksList.scss"
+import "./BooksList.scss";
 import Book1 from "../../assets/images/content.jpg";
+import Loader from "../Loader/Loader";
 
+const API_KEY = "AIzaSyCvcdVCjGW292ele-eHakp-jqbvfRai3Dc";
+// const API_KEY = "AIzaSyA6SaT23KNiiA6DnUfUQTvFeyAcQEkwnSU";
 
-// const API_KEY = "AIzaSyCvcdVCjGW292ele-eHakp-jqbvfRai3Dc";
-const API_KEY = "AIzaSyA6SaT23KNiiA6DnUfUQTvFeyAcQEkwnSU";
-
-const BooksFirstList = ({ selectedGenre,  }) => {
+const BooksFirstList = ({ selectedGenre }) => {
   const dispatch = useDispatch();
   const dataState = useSelector((state) => state.data);
+  const loading = useSelector((state) => state.data.loading);
+  const error = useSelector((state) => state.data.error);
   // console.log(dataState);
-
+  
   useEffect(() => {
     const genreQuery = selectedGenre === "All" ? "" : `${selectedGenre}`;
-    dispatch(fetchData(`https://www.googleapis.com/books/v1/volumes?q=${genreQuery}+inauthor:keyes&key=${API_KEY}`));
-    
+    dispatch(
+      fetchData(
+        `https://www.googleapis.com/books/v1/volumes?q=${genreQuery}+inauthor:keyes&key=${API_KEY}&maxResults=40`
+      )
+    );
   }, [dispatch, selectedGenre]);
 
-  if (!dataState.data || !dataState.data.items) {
-    return <p>Loading...</p>;
+  if (loading || !dataState.data || !dataState.data.items) {
+    return <Loader/>;
   }
 
-  const books = dataState.data.items.slice(0, 6).map((item) => ({
+  if (error) {
+    return <p>Error</p>;
+  }
+
+  const books = dataState.data.items.slice(0, 10).map((item) => ({
+    id: item.id,
     image: item.volumeInfo?.imageLinks?.thumbnail || Book1,
     title: item.volumeInfo?.title,
     author: item.volumeInfo?.authors ? item.volumeInfo.authors[0] : "",
@@ -40,6 +50,7 @@ const BooksFirstList = ({ selectedGenre,  }) => {
         {books.map((item, index) => (
           <li key={index}>
             <Book
+              id={item.id}
               image={item.image}
               title={item.title}
               author={item.author}

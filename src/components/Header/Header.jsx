@@ -14,7 +14,7 @@ return (
             </div>
             <ul>
                 <li>
-                    <NavLink to="/explore">
+                    <NavLink to="/">
                         Explorer
                     </NavLink>
                 </li>
